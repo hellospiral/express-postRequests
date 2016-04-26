@@ -8,7 +8,8 @@ app.get("/", function(req, res) {
 });
 
 app.get("/friends", function(req, res) {
-    res.render("friends");
+    var friends = ["Mike", "Billy", "Joey", "Lilly", "Rachael"];
+    res.render("friends", {friends: friends});
 });
 
 app.listen(process.env.PORT, process.env.IP, function() {
